@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Companion | College Life Made Easy</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">🎓 Campus Companion</div>
+        <p>Your College Life, Organized in One Place!</p>
+
+        <nav>
+            <a href="#dashboard">Home</a>
+            <a href="#timetable">Timetable</a>
+            <a href="#assignments">Assignments</a>
+            <a href="#notices">Notices</a>
+            <a href="#notes">Quick Notes</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Welcome Section -->
+        <section id="dashboard" class="welcome">
+            <div>
+                <h1>Hey, Student! 👋</h1>
+                <p>Welcome to your personal campus space.</p>
+                <p>Plan your day, manage your tasks and stay organized!</p>
+            </div>
+            <div class="welcome-icon">📚✨</div>
+        </section>
+
+        <!-- Dashboard Cards -->
+        <section class="dashboard">
+            <h2>✨ Your Campus Dashboard</h2>
+
+            <div class="card-grid">
+
+                <article class="card attendance-card">
+                    <div class="card-icon">📊</div>
+                    <h3>Attendance Tracker</h3>
+                    <p>Keep track of your class attendance.</p>
+                    <a href="#attendance" class="card-button">Manage Attendance →</a>
+                </article>
+
+                <article class="card exam-card">
+                    <div class="card-icon">⏳</div>
+                    <h3>Exam Countdown</h3>
+                    <p>Stay ready for your upcoming exams.</p>
+                    <a href="#exam" class="card-button">Check Exams →</a>
+                </article>
+
+                <article class="card assignment-card">
+                    <div class="card-icon">📝</div>
+                    <h3>Assignments</h3>
+                    <p>Organize your assignments and deadlines.</p>
+                    <a href="#assignments" class="card-button">View Tasks →</a>
+                </article>
+
+                <article class="card timetable-card">
+                    <div class="card-icon">📅</div>
+                    <h3>Timetable</h3>
+                    <p>Keep your daily class schedule ready.</p>
+                    <a href="#timetable" class="card-button">View Schedule →</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Timetable -->
+        <section id="timetable" class="panel">
+            <h2>📅 My Timetable</h2>
+
+            <div class="input-row">
+                <input type="text" id="subjectInput" placeholder="Enter subject name">
+                <input type="text" id="timeInput" placeholder="Enter class time">
+                <button id="addTimetable">+ Add Class</button>
+            </div>
+
+            <ul id="timetableList" class="item-list"></ul>
+        </section>
+
+        <!-- Assignments -->
+        <section id="assignments" class="panel">
+            <h2>📝 My Assignments</h2>
+
+            <div class="input-row">
+                <input type="text" id="assignmentInput" placeholder="Enter assignment name">
+                <input type="date" id="assignmentDate">
+                <button id="addAssignment">+ Add Assignment</button>
+            </div>
+
+            <ul id="assignmentList" class="item-list"></ul>
+        </section>
+
+        <!-- Notices -->
+        <section id="notices" class="panel">
+            <h2>📢 College Notices</h2>
+            <p class="section-description">Keep important college updates in one place.</p>
+
+            <div class="input-row">
+                <input type="text" id="noticeInput" placeholder="Enter notice">
+                <button id="addNotice">+ Add Notice</button>
+            </div>
+
+            <ul id="noticeList" class="item-list"></ul>
+        </section>
+
+        <!-- Quick Notes -->
+        <section id="notes" class="panel">
+            <h2>📒 Quick Notes</h2>
+            <p class="section-description">Write down ideas, reminders and important points.</p>
+
+            <textarea id="noteInput" placeholder="Write your note here..."></textarea>
+
+            <button id="saveNote">💾 Save Note</button>
+
+            <div id="notesList" class="notes-list"></div>
+        </section>
+
+        <!-- Attendance -->
+        <section id="attendance" class="panel">
+            <h2>📊 Attendance Tracker</h2>
+
+            <div class="input-row">
+                <input type="text" id="attendanceSubject" placeholder="Enter subject name">
+                <input type="number" id="totalClasses" placeholder="Total classes" min="1">
+                <input type="number" id="attendedClasses" placeholder="Classes attended" min="0">
+                <button id="calculateAttendance">Calculate</button>
+            </div>
+
+            <div id="attendanceResult" class="result-box">
+                Enter your class details to calculate attendance.
+            </div>
+
+            <div id="attendanceList" class="item-list"></div>
+        </section>
+
+        <!-- Exam Countdown -->
+        <section id="exam" class="panel exam-panel">
+            <h2>⏳ Exam Countdown</h2>
+            <p>Enter your upcoming exam date.</p>
+
+            <div class="input-row">
+                <input type="text" id="examName" placeholder="Enter exam name">
+                <input type="date" id="examDate">
+                <button id="saveExam">Save Exam</button>
+            </div>
+
+            <div id="examResult" class="result-box">
+                Your exam countdown will appear here.
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h3>🎓 Campus Companion</h3>
+        <p>Making College Life Easier, One Day at a Time! 💜</p>
+        <p>Student Project | Made with ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
